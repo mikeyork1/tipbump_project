@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block head_title %}TipBump | Home{% endblock %}
+
+{% block content %}
+    {{ title }}
+    {{ user }}
+    {{ user.is_authenticated }}
+
+    {% if user.is_authenticated %}
+        <h1>USER ONLY DATA</h1>
+        {% for a in my_list %}
+            <li>{{ a }}</li>
+        {% endfor %}
+    {% endif %}
+    <p>This is our home page.</p>
+{% endblock %}

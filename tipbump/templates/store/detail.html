@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block head_title %}{{ object.store_name }}{% endblock %}
+
+{%  block content %}
+    <h1>{{ object.store_name }}</h1>
+    <p>{{ object.slug }}</p>
+    <p>{{ object.store_id }}</p>
+    <p>{{ object.report_creation_day }}</p>
+    <p>{{ object.report_creation_time }}</p>
+
+    {% if request.user.is_authenticated %}
+        <a href="{{ object.get_edit_url }}">Edit</a>
+        <a href="{{ object.get_delete_url }}">Delete</a>
+
+    {% endif %}
+
+{% endblock %}

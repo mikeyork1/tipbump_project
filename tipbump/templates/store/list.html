@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block head_title %}{{ object.store_name }}{% endblock %}
+
+{%  block content %}
+
+    {% for object in object_list %}
+        {% include "store/list-inline.html" with store=object %}
+    {% endfor %}
+
+{% endblock %}

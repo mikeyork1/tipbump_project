@@ -20,9 +20,8 @@ from .views import (
     store_list_view,
     store_detail_view,
     store_update_view,
-    store_delete_view
+    store_delete_view,
 )
-
 
 urlpatterns = [
     path('', store_list_view),

@@ -19,12 +19,14 @@ from django.urls import path, include
 
 from tipbump.views import (
     store_create_view,
+    site_update_view
 )
 
 from .views import (
     home_page,
     contact_page,
-    about_page
+    about_page,
+    scorecard_view
 )
 
 urlpatterns = [
@@ -33,7 +35,9 @@ urlpatterns = [
     path('contact/', contact_page),
     path('admin/', admin.site.urls),
     path('store-new/', store_create_view),
-    path('store/', include('tipbump.urls'))
+    path('store/', include('tipbump.urls')),
+    path('scorecard/', scorecard_view),
+    path('site-settings/', site_update_view)
 ]
 
 if settings.DEBUG:

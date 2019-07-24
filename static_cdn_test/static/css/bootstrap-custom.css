@@ -1,0 +1,25 @@
+.tb-navbar {
+  background-color: #676463;
+}
+
+.tb-navbar .navbar-brand {
+  color: white;
+}
+
+.tb-navbar .navbar-brand:hover {
+  color: #d0cdcd;
+}
+
+.tb-navbar .nav-link {
+  color: white;
+}
+
+.tb-navbar .nav-link:hover {
+  color: #d0cdcd;
+}
+
+.tb-navbar .nav-link.disabled {
+  color: #d0cdcd;
+  pointer-events: none;
+  cursor: default;
+}
